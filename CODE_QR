@@ -1,1 +1,17 @@
+import qrcode
+ 
+
+URL = input ("ENTER THE URL:").strip()
+
+FILE_PATH = "C:\\Users\\jaffa\\OneDrive\\Desktop\\qr_code.png"
+
+
+qr = qrcode.QRCode()
+qr.add_data(URL)
+
+img  = qr.make_image()
+img.save(FILE_PATH)
+
+print ("................YOUR QR IS GENERATED INN YOUR FILE.............. ")
+
 
